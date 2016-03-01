@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">ChangeBooths</string>
+
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="title_activity_local_services">Local Services</string>
+
+    <string name="title_activity_language">LanguageActivity</string>
+</resources>
