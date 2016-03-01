@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    android:weightSum="1">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView"
+        android:layout_row="0"
+        android:layout_column="1" >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="100dp"
+            android:paddingTop="150dp">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:weightSum="1">
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:ems="10"
+                    android:id="@+id/textName"
+                    android:textSize="45dp"
+                    android:layout_weight="0.10"
+                    android:background="@null"
+                    android:text="Old MacDonald"
+                    android:textStyle="bold"
+                    android:textColor="#3b3b3b" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:weightSum="1"
+                android:background="@null">
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="phone"
+                    android:ems="10"
+                    android:id="@+id/textPhone"
+                    android:textSize="30dp"
+                    android:phoneNumber="true"
+                    android:layout_weight="0.10"
+                    android:background="@null"
+                    android:text="123-456-7890"
+                    android:textColor="#696969"
+                    android:textIsSelectable="false" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:weightSum="1">
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:id="@+id/textEmail"
+                    android:textSize="30dp"
+                    android:inputType="textEmailAddress"
+                    android:layout_weight="0.13"
+                    android:background="@null"
+                    android:text="email@changebooths.com"
+                    android:textColor="#696969" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:id="@+id/textEducation"
+                    android:textSize="30dp"
+                    android:background="@null"
+                    android:textColor="#696969"
+                    android:text="Rutgers University" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Skills: "
+                    android:id="@+id/textView5"
+                    android:textSize="40dp" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="834dp"
+                android:layout_height="match_parent"
+                android:id="@+id/skillsLayout"
+                >
+
+                <ToggleButton
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:id="@+id/toggleButton"
+                    android:textColor="#000000"
+                    android:textColorHighlight="#ffffff"
+                    android:textOff="Farmer"
+                    android:textOn="Farmer"
+                    android:background="@drawable/round_button"
+                    android:layout_marginRight="20dp" />
+
+                <ToggleButton
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:id="@+id/toggleButton3"
+                    android:textColor="#000000"
+                    android:textColorHighlight="#ffffff"
+                    android:textOff="Handyman"
+                    android:textOn="Handyman"
+                    android:background="@drawable/round_button"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/toggleButton4"
+                    android:layout_toEndOf="@+id/toggleButton4"
+                    android:layout_marginRight="20dp" />
+
+                <ToggleButton
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:id="@+id/toggleButton4"
+                    android:textColor="#000000"
+                    android:textColorHighlight="#ffffff"
+                    android:textOff="Carpenter"
+                    android:textOn="Carpenter"
+                    android:background="@drawable/round_button"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/toggleButton"
+                    android:layout_toEndOf="@+id/toggleButton"
+                    android:layout_marginRight="20dp" />
+
+                <ToggleButton
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:id="@+id/toggleButton5"
+                    android:textColor="#000000"
+                    android:textColorHighlight="#ffffff"
+                    android:textOff="Electrician"
+                    android:textOn="Electrician"
+                    android:background="@drawable/round_button"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/toggleButton3"
+                    android:layout_toEndOf="@+id/toggleButton3"
+                    android:layout_marginRight="20dp" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Work History: "
+                    android:id="@+id/textView6"
+                    android:textSize="40dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:drawable/dialog_holo_light_frame">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Farmer Joe&apos;s"
+                        android:id="@+id/textView7"
+                        android:textIsSelectable="false"
+                        android:textSize="30dp"
+                        android:textColor="#696969"
+                        android:layout_centerVertical="true" />
+
+                    <RatingBar
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/ratingBar2"
+                        android:rating="1"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginRight="265dp"
+                        android:layout_marginEnd="265dp"
+                        android:progressTint="#FDBB26"
+                        android:secondaryProgressTint="#FDBB26"
+                        android:progressBackgroundTint="#3b3b3b" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="261dp"
+        android:layout_height="fill_parent"
+        android:layout_column="0"
+        android:layout_row="0"
+        android:weightSum="1"
+        android:paddingRight="10dp"
+        android:paddingTop="150dp"
+        android:layout_marginLeft="50dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:id="@+id/imageView"
+            android:layout_weight="0.34"
+            android:src="@drawable/farmer"/>
+
+        <RatingBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ratingBar"
+            android:rating="3"
+
+            android:layout_below="@+id/imageView"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:secondaryProgressTint="#FDBB26"
+            android:progressTint="#FDBB26" />
+
+    </RelativeLayout>
+</GridLayout>
+

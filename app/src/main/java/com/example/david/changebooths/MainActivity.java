@@ -31,5 +31,20 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
 
     }
+    public void onProfileClick(View v) {
+
+        Intent intent = new Intent(this, Profile.class);
+        startActivity(intent);
+
+    }
+
+    /* Put your job activity here!!
+    public void onJobsClick(View v) {
+
+        Intent intent = new Intent(this, Profile.class);
+        startActivity(intent);
+
+    }
+    */
 
 }
