@@ -36,10 +36,18 @@
             android:value="@string/google_maps_key" />
 
         <activity
-            android:name=".LocalServicesActivity"
+            android:name=".Services.LocalServicesActivity"
             android:label="@string/title_activity_local_services" />
         <activity
-            android:name=".LanguageActivity"
+            android:name=".Profile.Profile"
+            android:label="Profile"
+            android:windowSoftInputMode="stateHidden" />
+
+        <activity android:name=".Jobs.JobsActivity"
+            android:label="Jobs" />
+
+        <activity
+            android:name=".Language.LanguageActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/title_activity_language"
             android:theme="@style/FullscreenTheme">

@@ -1,18 +1,15 @@
-package com.example.david.changebooths;
+package com.example.david.changebooths.Profile;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
-import android.widget.RelativeLayout;
+import android.view.WindowManager;
 import android.widget.TextView;
 
+import com.example.david.changebooths.Profile.Models.User;
+import com.example.david.changebooths.R;
+
 import java.util.ArrayList;
-
-
-
 
 public class Profile extends AppCompatActivity {
 
@@ -23,14 +20,22 @@ public class Profile extends AppCompatActivity {
     String education = "Rutgers University";
     ArrayList<String> skills = new ArrayList<String>();
     ArrayList<String> work = new ArrayList<String>();
+
+    private View mContentView;
+
     @Override
-    // @TargetApi(16)
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
 
-
+        mContentView = findViewById(R.id.profile);
+        mContentView.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LOW_PROFILE
+                | View.SYSTEM_UI_FLAG_FULLSCREEN
+                | View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+                | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
+                | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+                | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION);
 
         skills.add("Farmer");
         skills.add("Handyman");
@@ -48,28 +53,9 @@ public class Profile extends AppCompatActivity {
             skillButton.setWidth(120);
             skillButton.setHeight(120);
 
-            ((RelativeLayout) skillsLayout).addView(skillButton);
+            //((RelativeLayout) skillsLayout).addView(skillButton);
         }
-
 
     }
 
-
-
-/*
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
-    */
 }

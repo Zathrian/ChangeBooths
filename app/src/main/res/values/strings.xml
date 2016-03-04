@@ -5,5 +5,5 @@
     <string name="dummy_content">DUMMY\nCONTENT</string>
     <string name="title_activity_local_services">Local Services</string>
 
-    <string name="title_activity_language">LanguageActivity</string>
+    <string name="title_activity_language">Change Booths</string>
 </resources>

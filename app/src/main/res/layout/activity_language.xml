@@ -15,8 +15,8 @@
         android:gravity="center">
 
         <LinearLayout
-            android:layout_height="150dp"
-            android:layout_width="150dp"
+            android:layout_height="300dp"
+            android:layout_width="300dp"
             android:layout_margin="24dp"
             android:background="@drawable/circle_grey"
             android:gravity="center"
@@ -27,16 +27,16 @@
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
                 android:text="english"
-                android:textSize="24sp"
-                android:textColor="#FFFFFF"
-                android:fontFamily="sans-serif"
+                android:textSize="40sp"
+                android:textColor="#000"
+                android:fontFamily="sans-serif-medium"
                 android:gravity="center" />
 
         </LinearLayout>
 
         <LinearLayout
-            android:layout_height="150dp"
-            android:layout_width="150dp"
+            android:layout_height="300dp"
+            android:layout_width="300dp"
             android:layout_margin="24dp"
             android:background="@drawable/circle_amber"
             android:gravity="center"
@@ -46,9 +46,9 @@
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
                 android:text="french"
-                android:textSize="24sp"
-                android:textColor="#FFFFFF"
-                android:fontFamily="sans-serif"
+                android:textSize="40sp"
+                android:textColor="#000"
+                android:fontFamily="sans-serif-medium"
                 android:gravity="center" />
 
         </LinearLayout>

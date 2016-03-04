@@ -5,6 +5,10 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
+import com.example.david.changebooths.Jobs.JobsActivity;
+import com.example.david.changebooths.Profile.Profile;
+import com.example.david.changebooths.Services.LocalServicesActivity;
+
 public class MainActivity extends AppCompatActivity {
 
     private View mContentView;
@@ -13,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.activity_language_picker);
+        setContentView(R.layout.activity_main);
 
         mContentView = findViewById(R.id.fullscreen_content);
 
@@ -38,13 +42,11 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    /* Put your job activity here!!
     public void onJobsClick(View v) {
 
-        Intent intent = new Intent(this, Profile.class);
+        Intent intent = new Intent(this, JobsActivity.class);
         startActivity(intent);
 
     }
-    */
 
 }
