@@ -1,16 +1,12 @@
-package com.example.david.changebooths.Language;
+package com.changebooths.Language;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
-import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.os.Handler;
-import android.view.MotionEvent;
 import android.view.View;
 
-import com.example.david.changebooths.MainActivity;
-import com.example.david.changebooths.R;
+import com.changebooths.MainActivity;
+import com.changebooths.R;
 
 /**
  * An example full-screen activity that shows and hides the system UI (i.e.

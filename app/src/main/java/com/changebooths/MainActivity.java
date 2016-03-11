@@ -1,13 +1,14 @@
-package com.example.david.changebooths;
+package com.changebooths;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
-import com.example.david.changebooths.Jobs.JobsActivity;
-import com.example.david.changebooths.Profile.Profile;
-import com.example.david.changebooths.Services.LocalServicesActivity;
+import com.changebooths.Jobs.JobsActivity;
+import com.changebooths.Profile.Profile;
+import com.changebooths.R;
+import com.changebooths.Services.LocalServicesActivity;
 
 public class MainActivity extends AppCompatActivity {
 

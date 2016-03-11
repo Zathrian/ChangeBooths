@@ -1,13 +1,12 @@
-package com.example.david.changebooths.Profile;
+package com.changebooths.Profile;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.view.WindowManager;
 import android.widget.TextView;
 
-import com.example.david.changebooths.Profile.Models.User;
-import com.example.david.changebooths.R;
+import com.changebooths.Profile.Models.User;
+import com.changebooths.R;
 
 import java.util.ArrayList;
 
@@ -56,6 +55,10 @@ public class Profile extends AppCompatActivity {
             //((RelativeLayout) skillsLayout).addView(skillButton);
         }
 
+    }
+
+    public void onClickBack(View v) {
+        super.onBackPressed();
     }
 
 }

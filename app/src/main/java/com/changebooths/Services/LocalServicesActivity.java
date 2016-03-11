@@ -1,10 +1,11 @@
-package com.example.david.changebooths.Services;
+package com.changebooths.Services;
 
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import android.view.View;
 
-import com.example.david.changebooths.R;
+import com.changebooths.Services.location.LocationContent;
+import com.changebooths.R;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -12,7 +13,7 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
-public class LocalServicesActivity extends FragmentActivity implements OnMapReadyCallback {
+public class LocalServicesActivity extends FragmentActivity implements OnMapReadyCallback, LocalServiceFragment.OnListFragmentInteractionListener {
 
     private GoogleMap mMap;
 
@@ -27,7 +28,7 @@ public class LocalServicesActivity extends FragmentActivity implements OnMapRead
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
 
-        mContentView = findViewById(R.id.map);
+        mContentView = findViewById(R.id.container_services);
 
         mContentView.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LOW_PROFILE
                 | View.SYSTEM_UI_FLAG_FULLSCREEN
@@ -51,17 +52,32 @@ public class LocalServicesActivity extends FragmentActivity implements OnMapRead
         mMap = googleMap;
 
         // Add a marker in Sydney and move the camera
-        LatLng haiti = new LatLng(18.570861, -72.293557);
-        mMap.addMarker(new MarkerOptions().position(haiti).title("Clean water"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(haiti, 11));
+        LatLng haiti = new LatLng(27.700597, 85.278239);
+        mMap.addMarker(new MarkerOptions().position(haiti).title("Water"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(haiti, 15));
 
-        LatLng haiti2 = new LatLng(18.536228, -72.284745);
-        mMap.addMarker(new MarkerOptions().position(haiti2).title("Free food"));
+        LatLng haiti2 = new LatLng(27.714579, 85.31128);
+        mMap.addMarker(new MarkerOptions().position(haiti2).title("Food"));
 
-        LatLng haiti3 = new LatLng(18.570861, -72.274745);
-        mMap.addMarker(new MarkerOptions().position(haiti3).title("Community Centers"));
+        LatLng haiti3 = new LatLng(27.711249, 85.319307);
+        mMap.addMarker(new MarkerOptions().position(haiti3).title("Healthcare"));
 
-        LatLng haiti4 = new LatLng(18.620798, -72.340155);
-        mMap.addMarker(new MarkerOptions().position(haiti4).title("Free Healthcare Centers"));
+        LatLng haiti4 = new LatLng(27.713394, 85.320616);
+        mMap.addMarker(new MarkerOptions().position(haiti4).title("Job Training"));
+
+        LatLng haiti5 = new LatLng(27.704045, 85.286060);
+        mMap.addMarker(new MarkerOptions().position(haiti5).title("Shelter"));
+    }
+
+    public void onListFragmentInteraction(LocationContent.LocationItem item) {
+
+        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(item.latLng, 15));
+
+    }
+
+    public void onClickBack(View v) {
+
+        super.onBackPressed();
+
     }
 }

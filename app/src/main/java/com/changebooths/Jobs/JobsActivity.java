@@ -1,4 +1,4 @@
-package com.example.david.changebooths.Jobs;
+package com.changebooths.Jobs;
 
 import android.app.Fragment;
 import android.os.Handler;
@@ -10,8 +10,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.TextView;
 
-import com.example.david.changebooths.R;
+import com.changebooths.R;
 
 public class JobsActivity extends AppCompatActivity {
     /**
@@ -30,11 +31,6 @@ public class JobsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        /*requestWindowFeature(Window.FEATURE_NO_TITLE);
-
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-                WindowManager.LayoutParams.FLAG_FULLSCREEN);*/
-
         setContentView(R.layout.activity_jobs);
 
         mContentView = findViewById(R.id.jobs);
@@ -49,20 +45,18 @@ public class JobsActivity extends AppCompatActivity {
         if (savedInstanceState == null) {
             getFragmentManager()
                     .beginTransaction()
-                    .add(R.id.container, new CardFrontFragment())
-                    .add(R.id.container2, new CardFrontFragment())
-                    .add(R.id.container3, new CardFrontFragment())
-                    .add(R.id.container4, new CardFrontFragment())
-                    .add(R.id.container5, new CardFrontFragment())
-                    .add(R.id.container6, new CardFrontFragment())
-                    .add(R.id.container7, new CardFrontFragment())
+                    .add(R.id.container, new CardFrontFragment("Nepal Communitere", "Operations Director", "Kathmandu, Nepal", "test4"))
+                    .add(R.id.container2, new CardFrontFragment("Kolpa World", "Store keeper", "Kathmandu, Nepal", "$" ))
+                    .add(R.id.container3, new CardFrontFragment("Maiti Nepal", "Custodian", "Kathmandu, Nepal", "$1.00/hr"))
+                    .add(R.id.container4, new CardFrontFragment("Amit’s Agriculture", "Farmer", "Kathmandu, Nepal", "$0.75/hr"))
+                    .add(R.id.container5, new CardFrontFragment("Nepali Library", "Book keeper", "Kathmandu, Nepal", "$1.25/hr"))
                     .commit();
 
         }
     }
 
     public void flipCard(View v) {
-        Log.i("test", "TESTTTT");
+
         if (mShowingBack) {
             getFragmentManager().popBackStack();
             mShowingBack = false;
@@ -93,13 +87,39 @@ public class JobsActivity extends AppCompatActivity {
      * A fragment representing the front of the card.
      */
     public static class CardFrontFragment extends Fragment {
-        public CardFrontFragment() {
+
+        public String employerName;
+        public String type;
+        public String location;
+        public String price;
+
+        public CardFrontFragment() {}
+
+        public CardFrontFragment( String employerName, String type, String location, String price ) {
+            this.employerName = employerName;
+            this.type = type;
+            this.location = location;
+            this.price = price;
         }
 
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
-            return inflater.inflate(R.layout.fragment_card_front, container, false);
+            View view = inflater.inflate(R.layout.fragment_card_front, container, false);
+
+            TextView employerName = (TextView)view.findViewById(R.id.employerName);
+            employerName.setText(this.employerName);
+
+            TextView type = (TextView)view.findViewById(R.id.type);
+            type.setText("Looking for: " + this.type);
+
+            TextView location = (TextView)view.findViewById(R.id.location);
+            location.setText("Location: " + this.location);
+
+            TextView price = (TextView)view.findViewById(R.id.price);
+            price.setText("Compensation: " + this.price);
+
+            return view;
         }
     }
 
@@ -115,5 +135,11 @@ public class JobsActivity extends AppCompatActivity {
                                  Bundle savedInstanceState) {
             return inflater.inflate(R.layout.fragment_card_back, container, false);
         }
+    }
+
+    public void onClickBack(View v) {
+
+        super.onBackPressed();
+
     }
 }

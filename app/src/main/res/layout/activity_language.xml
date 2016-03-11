@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFF"
-    tools:context=".MainActivity">
+    tools:context="com.changebooths.MainActivity">
 
     <LinearLayout
         android:id="@+id/fullscreen_content"
@@ -14,44 +14,22 @@
         android:orientation="horizontal"
         android:gravity="center">
 
-        <LinearLayout
-            android:layout_height="300dp"
-            android:layout_width="300dp"
+        <ImageView
+            android:layout_height="575dp"
+            android:layout_width="575dp"
             android:layout_margin="24dp"
-            android:background="@drawable/circle_grey"
+            android:background="@drawable/language_englishbutton"
             android:gravity="center"
             android:clickable="true"
-            android:onClick="onLocalServicesClick">
+            android:onClick="onLocalServicesClick" />
 
-            <TextView
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
-                android:text="english"
-                android:textSize="40sp"
-                android:textColor="#000"
-                android:fontFamily="sans-serif-medium"
-                android:gravity="center" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_height="300dp"
-            android:layout_width="300dp"
+        <ImageView
+            android:layout_height="575dp"
+            android:layout_width="575dp"
             android:layout_margin="24dp"
-            android:background="@drawable/circle_amber"
+            android:background="@drawable/language_nepalibutton"
             android:gravity="center"
-            android:clickable="true" >
-
-            <TextView
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
-                android:text="french"
-                android:textSize="40sp"
-                android:textColor="#000"
-                android:fontFamily="sans-serif-medium"
-                android:gravity="center" />
-
-        </LinearLayout>
+            android:clickable="true" />
 
     </LinearLayout>
 

@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFF"
-    tools:context=".MainActivity">
+    tools:context="com.changebooths.MainActivity">
 
     <LinearLayout
         android:id="@+id/fullscreen_content"
@@ -22,37 +22,11 @@
             android:gravity="center"
             android:clickable="true"
             android:orientation="vertical"
-            android:onClick="onJobsClick">
-
-            <ImageView
-                android:layout_width="128dp"
-                android:layout_height="128dp"
-                android:background="@drawable/ic_jobs_temp"/>
-
-            <TextView
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
-                android:text="jobs"
-                android:textSize="32sp"
-                android:textColor="#000"
-                android:fontFamily="sans-serif-medium"
-                android:gravity="center"
-                android:layout_marginTop="10dp"/>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:layout_margin="48dp"
-            android:gravity="center"
-            android:clickable="true"
-            android:orientation="vertical"
             android:onClick="onLocalServicesClick">
 
             <ImageView
-                android:layout_width="128dp"
-                android:layout_height="128dp"
+                android:layout_width="464px"
+                android:layout_height="464px"
                 android:background="@drawable/ic_services"/>
 
             <TextView
@@ -74,11 +48,37 @@
             android:gravity="center"
             android:clickable="true"
             android:orientation="vertical"
+            android:onClick="onJobsClick">
+
+            <ImageView
+                android:layout_width="464px"
+                android:layout_height="464px"
+                android:background="@drawable/ic_jobs"/>
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="jobs"
+                android:textSize="32sp"
+                android:textColor="#000"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center"
+                android:layout_marginTop="10dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_margin="48dp"
+            android:gravity="center"
+            android:clickable="true"
+            android:orientation="vertical"
             android:onClick="onProfileClick">
 
             <ImageView
-                android:layout_width="128dp"
-                android:layout_height="128dp"
+                android:layout_width="464px"
+                android:layout_height="464px"
                 android:background="@drawable/ic_profile"/>
 
             <TextView
@@ -101,19 +101,11 @@
         android:layout_gravity="bottom|right"
         android:orientation="horizontal">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Need help?"
-            android:textSize="24dp"
-            android:fontFamily="sans-serif-light"
-            android:layout_gravity="center_vertical"/>
-
         <ImageView
             android:layout_margin="24dp"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:background="@drawable/circle_amber"
+            android:layout_width="452px"
+            android:layout_height="118px"
+            android:background="@drawable/ic_help"
             android:layout_gravity="center_vertical" />
 
 

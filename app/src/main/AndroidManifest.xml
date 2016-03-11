@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.david.changebooths">
+    package="com.changebooths">
 
     <!--
          The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
@@ -16,7 +16,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".MainActivity"
+            android:name="com.changebooths.MainActivity"
+            android:parentActivityName="com.changebooths.Language.LanguageActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/app_name"
             android:screenOrientation="landscape"
@@ -36,18 +37,21 @@
             android:value="@string/google_maps_key" />
 
         <activity
-            android:name=".Services.LocalServicesActivity"
+            android:name="com.changebooths.Services.LocalServicesActivity"
+            android:parentActivityName="com.changebooths.MainActivity"
             android:label="@string/title_activity_local_services" />
         <activity
-            android:name=".Profile.Profile"
+            android:name="com.changebooths.Profile.Profile"
+            android:parentActivityName="com.changebooths.MainActivity"
             android:label="Profile"
             android:windowSoftInputMode="stateHidden" />
 
-        <activity android:name=".Jobs.JobsActivity"
+        <activity android:name="com.changebooths.Jobs.JobsActivity"
+            android:parentActivityName="com.changebooths.MainActivity"
             android:label="Jobs" />
 
         <activity
-            android:name=".Language.LanguageActivity"
+            android:name="com.changebooths.Language.LanguageActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/title_activity_language"
             android:theme="@style/FullscreenTheme">

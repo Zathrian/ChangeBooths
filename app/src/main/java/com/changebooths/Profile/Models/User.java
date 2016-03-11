@@ -1,4 +1,4 @@
-package com.example.david.changebooths.Profile.Models;
+package com.changebooths.Profile.Models;
 
 import java.util.ArrayList;
 
@@ -11,8 +11,8 @@ public class User {
     String Education;
     String Email;
     String Phone;
-    public ArrayList<String> skills;
-    ArrayList<String> work;
+    public static ArrayList<String> skills;
+    public static ArrayList<String> work;
 
     public User(String Name, String Phone, String Email, String Education, ArrayList skills)
     {
