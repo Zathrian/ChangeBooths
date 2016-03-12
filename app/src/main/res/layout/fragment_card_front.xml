@@ -25,7 +25,6 @@
                 android:id="@+id/employerProfile"
                 android:layout_width="176dp"
                 android:layout_height="225dp"
-                android:background="@drawable/job_employer4"
                 android:layout_margin="10dp" />
 
             <LinearLayout

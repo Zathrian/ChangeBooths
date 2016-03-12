@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:id="@+id/jobs"
-    tools:context="com.example.david.changebooths4.JobsActivity"
+    tools:context="com.changebooths.JobsActivity"
     android:background="#FFF">
 
     <RelativeLayout
@@ -17,15 +17,17 @@
         <ImageView
             android:layout_width="75dp"
             android:layout_height="75dp"
-            android:layout_margin="16dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginLeft="16dp"
             android:background="@drawable/job_backbutton_large"
             android:onClick="onClickBack" />
 
         <ImageView
             android:layout_alignParentRight="true"
-            android:layout_margin="16dp"
-            android:layout_width="148dp"
-            android:layout_height="80dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="12dp"
+            android:layout_width="300px"
+            android:layout_height="150px"
             android:background="@drawable/job_jobtext" />
 
     </RelativeLayout>

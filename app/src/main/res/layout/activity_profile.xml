@@ -1,388 +1,342 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFF"
     tools:context=".Profile"
-    android:id="@+id/profile">
+    android:id="@+id/profile"
+    android:orientation="vertical">
 
-    <GridLayout
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="#FFF"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="16dp"
+            android:background="@drawable/job_backbutton_large"
+            android:onClick="onClickBack" />
+
+        <ImageView
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="12dp"
+            android:layout_marginRight="16dp"
+            android:layout_width="325px"
+            android:layout_height="150px"
+            android:background="@drawable/profile_profiletext" />
+
+    </RelativeLayout>
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:weightSum="1">
-
-        <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/scrollView"
-            android:layout_row="0"
-            android:layout_column="1" >
-
-            <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:paddingLeft="100dp"
-                android:paddingTop="150dp">
-
-                <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:weightSum="1">
-
-                    <EditText
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:inputType="textPersonName"
-                        android:ems="10"
-                        android:id="@+id/textName"
-                        android:textSize="45dp"
-                        android:layout_weight="0.10"
-                        android:background="@null"
-                        android:text="Aayush Sharma"
-                        android:textStyle="bold"
-                        android:textColor="#3b3b3b" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:weightSum="1"
-                    android:background="@null">
-
-                    <EditText
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:inputType="phone"
-                        android:ems="10"
-                        android:id="@+id/textPhone"
-                        android:textSize="30dp"
-                        android:phoneNumber="true"
-                        android:layout_weight="0.10"
-                        android:background="@null"
-                        android:text="+977 1 4XX XXX"
-                        android:textColor="#696969"
-                        android:textIsSelectable="false" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:weightSum="1">
-
-                    <EditText
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:ems="10"
-                        android:id="@+id/textEmail"
-                        android:textSize="30dp"
-                        android:inputType="textEmailAddress"
-                        android:layout_weight="0.13"
-                        android:background="@null"
-                        android:text="employee@changebooths.com"
-                        android:textColor="#696969" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" >
-
-                    <EditText
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:ems="10"
-                        android:id="@+id/textEducation"
-                        android:textSize="30dp"
-                        android:inputType="textNoSuggestions"
-                        android:background="@null"
-                        android:textColor="#696969"
-                        android:text="Kathmandu University" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" >
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Skills: "
-                        android:id="@+id/textView5"
-                        android:textSize="40dp" />
-
-                </LinearLayout>
-
-                <RelativeLayout
-                    android:layout_width="834dp"
-                    android:layout_height="match_parent"
-                    android:id="@+id/skillsLayout"
-                    >
-
-                    <ToggleButton
-                        android:layout_width="120dp"
-                        android:layout_height="120dp"
-                        android:id="@+id/toggleButton"
-                        android:textColor="#000000"
-                        android:textColorHighlight="#ffffff"
-                        android:textOff="Farmer"
-                        android:textOn="Farmer"
-                        android:background="@drawable/round_button"
-                        android:layout_marginRight="20dp"
-                        android:layout_marginBottom="5dp" />
-
-                    <ToggleButton
-                        android:layout_width="120dp"
-                        android:layout_height="120dp"
-                        android:id="@+id/toggleButton3"
-                        android:textColor="#000000"
-                        android:textColorHighlight="#ffffff"
-                        android:textOff="Handyman"
-                        android:textOn="Handyman"
-                        android:background="@drawable/round_button"
-                        android:layout_alignParentTop="true"
-                        android:layout_toRightOf="@+id/toggleButton4"
-                        android:layout_toEndOf="@+id/toggleButton4"
-                        android:layout_marginRight="20dp"
-                        android:layout_marginBottom="5dp" />
-
-                    <ToggleButton
-                        android:layout_width="120dp"
-                        android:layout_height="120dp"
-                        android:id="@+id/toggleButton4"
-                        android:textColor="#000000"
-                        android:textColorHighlight="#ffffff"
-                        android:textOff="Carpenter"
-                        android:textOn="Carpenter"
-                        android:background="@drawable/round_button"
-                        android:layout_alignParentTop="true"
-                        android:layout_toRightOf="@+id/toggleButton"
-                        android:layout_toEndOf="@+id/toggleButton"
-                        android:layout_marginRight="20dp"
-                        android:layout_marginBottom="5dp" />
-
-                    <ToggleButton
-                        android:layout_width="120dp"
-                        android:layout_height="120dp"
-                        android:id="@+id/toggleButton5"
-                        android:textColor="#000000"
-                        android:textColorHighlight="#ffffff"
-                        android:textOff="Electrician"
-                        android:textOn="Electrician"
-                        android:background="@drawable/round_button"
-                        android:layout_alignParentTop="true"
-                        android:layout_toRightOf="@+id/toggleButton3"
-                        android:layout_toEndOf="@+id/toggleButton3"
-                        android:layout_marginRight="20dp"
-                        android:layout_marginBottom="5dp" />
-
-                </RelativeLayout>
-
-                <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_width="834dp"
-                    android:layout_height="match_parent" >
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Work History: "
-                        android:id="@+id/textView6"
-                        android:textSize="40dp" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:orientation="vertical"
-                    android:layout_width="834dp"
-                    android:layout_height="match_parent">
-
-                    <RelativeLayout
-                        android:orientation="horizontal"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="@android:drawable/dialog_holo_light_frame">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Pragya Lohani"
-                            android:id="@+id/textView7"
-                            android:textIsSelectable="false"
-                            android:textSize="30dp"
-                            android:textColor="#696969"
-                            android:layout_centerVertical="true" />
-
-                        <LinearLayout
-                            android:layout_alignParentTop="true"
-                            android:layout_alignParentRight="true"
-                            android:layout_alignParentEnd="true"
-                            android:layout_margin="8dp"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal">
-
-                            <ImageView
-                                android:layout_width="75px"
-                                android:layout_height="75px"
-                                android:background="@drawable/ic_lightbulb_fullcolor" />
-
-                            <ImageView
-                                android:layout_width="75px"
-                                android:layout_height="75px"
-                                android:background="@drawable/ic_lightbulb_fullcolor" />
-
-                            <ImageView
-                                android:layout_width="75px"
-                                android:layout_height="75px"
-                                android:background="@drawable/ic_lightbulb_fullcolor" />
-
-                            <ImageView
-                                android:layout_width="75px"
-                                android:layout_height="75px"
-                                android:background="@drawable/ic_lightbulb_fullcolor" />
-
-                            <ImageView
-                                android:layout_width="75px"
-                                android:layout_height="75px"
-                                android:background="@drawable/ic_lightbulb_fullcolor" />
-
-                        </LinearLayout>
-                    </RelativeLayout>
-
-                    <RelativeLayout
-                        android:orientation="horizontal"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="@android:drawable/dialog_holo_light_frame">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Tanu Bhusal"
-                            android:id="@+id/textView8"
-                            android:textIsSelectable="false"
-                            android:textSize="30dp"
-                            android:textColor="#696969"
-                            android:layout_centerVertical="true" />
-
-                        <LinearLayout
-                            android:layout_alignParentTop="true"
-                            android:layout_alignParentRight="true"
-                            android:layout_alignParentEnd="true"
-                            android:layout_margin="8dp"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal">
-
-                            <ImageView
-                                android:layout_width="75px"
-                                android:layout_height="75px"
-                                android:background="@drawable/ic_lightbulb_fullcolor" />
-
-                            <ImageView
-                                android:layout_width="75px"
-                                android:layout_height="75px"
-                                android:background="@drawable/ic_lightbulb_fullcolor" />
-
-                            <ImageView
-                                android:layout_width="75px"
-                                android:layout_height="75px"
-                                android:background="@drawable/ic_lightbulb_fullcolor" />
-
-                            <ImageView
-                                android:layout_width="75px"
-                                android:layout_height="75px"
-                                android:background="@drawable/ic_lightbulb_fullcolor" />
-
-                            <ImageView
-                                android:layout_width="75px"
-                                android:layout_height="75px"
-                                android:background="@drawable/ic_lightbulb_halfcolor" />
-
-                        </LinearLayout>
-                    </RelativeLayout>
-                </LinearLayout>
-            </LinearLayout>
-        </ScrollView>
+        android:background="#FFF"
+        android:orientation="horizontal">
 
         <RelativeLayout
             android:orientation="vertical"
-            android:layout_width="280dp"
-            android:layout_height="fill_parent"
-            android:layout_column="0"
-            android:layout_row="0"
-            android:weightSum="1"
-            android:paddingTop="10dp"
-            android:paddingRight="10dp"
-            android:layout_marginLeft="50dp">
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            >
 
             <ImageView
-                android:id="@+id/backButton"
-                android:layout_width="75dp"
-                android:layout_height="75dp"
-                android:layout_margin="16dp"
-                android:background="@drawable/job_backbutton_large"
-                android:onClick="onClickBack" />
-
-            <ImageView
-                android:layout_below="@+id/backButton"
-                android:layout_width="match_parent"
-                android:layout_height="250dp"
-                android:layout_marginTop="36dp"
+                android:layout_marginTop="8dp"
+                android:layout_width="700px"
+                android:layout_height="700px"
+                android:layout_centerHorizontal="true"
                 android:id="@+id/imageView"
-                android:layout_weight="0.34"
-                android:src="@drawable/pic1"/>
+                android:src="@drawable/profile_profileimage"/>
 
             <LinearLayout
+                android:id="@+id/rating"
                 android:layout_below="@+id/imageView"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_marginTop="15dp"
-                android:layout_marginLeft="0dp"
+                android:layout_marginTop="16dp"
+                android:layout_centerHorizontal="true"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:layout_width="75px"
-                    android:layout_height="75px"
+                    android:layout_width="100px"
+                    android:layout_height="100px"
                     android:background="@drawable/ic_lightbulb_fullcolor" />
 
                 <ImageView
-                    android:layout_width="75px"
-                    android:layout_height="75px"
+                    android:layout_width="100px"
+                    android:layout_height="100px"
                     android:background="@drawable/ic_lightbulb_fullcolor" />
 
                 <ImageView
-                    android:layout_width="75px"
-                    android:layout_height="75px"
+                    android:layout_width="100px"
+                    android:layout_height="100px"
                     android:background="@drawable/ic_lightbulb_fullcolor" />
 
                 <ImageView
-                    android:layout_width="75px"
-                    android:layout_height="75px"
+                    android:layout_width="100px"
+                    android:layout_height="100px"
                     android:background="@drawable/ic_lightbulb_fullcolor" />
 
                 <ImageView
-                    android:layout_width="75px"
-                    android:layout_height="75px"
+                    android:layout_width="100px"
+                    android:layout_height="100px"
                     android:background="@drawable/ic_lightbulb_halfcolor" />
-
-                <TextView
-                    android:layout_marginLeft="3dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="(23 ratings)" />
 
             </LinearLayout>
 
-        </RelativeLayout>
-    </GridLayout>
+            <TextView
+                android:layout_below="@+id/rating"
+                android:layout_marginTop="10dp"
+                android:textSize="20dp"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="(23 ratings)" />
 
-</FrameLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:orientation="vertical"
+            android:paddingLeft="32dp"
+            android:paddingTop="32dp">
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:id="@+id/textName"
+                android:textSize="45dp"
+                android:background="@null"
+                android:text="Aayush Sharma"
+                android:textStyle="bold"
+                android:textColor="#3b3b3b" />
+
+            <EditText
+                android:layout_marginTop="32dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="phone"
+                android:id="@+id/textPhone"
+                android:textSize="30dp"
+                android:phoneNumber="true"
+                android:background="@null"
+                android:text="+977 1 4XX XXX"
+                android:textColor="#696969"
+                android:textIsSelectable="false" />
+
+            <EditText
+                android:layout_marginTop="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textEmail"
+                android:background="@null"
+                android:textSize="30dp"
+                android:inputType="textEmailAddress"
+                android:text="employee@changebooths.com"
+                android:textColor="#696969"
+                android:textIsSelectable="false"/>
+
+            <EditText
+                android:layout_marginTop="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textEducation"
+                android:textSize="30dp"
+                android:inputType="textNoSuggestions"
+                android:background="@null"
+                android:textColor="#696969"
+                android:text="Kathmandu University" />
+
+            <TextView
+                android:layout_marginTop="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Skills: "
+                android:id="@+id/textView5"
+                android:textSize="30dp" />
+
+            <RelativeLayout
+                android:layout_marginTop="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/skillsLayout" >
+
+                <ToggleButton
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:id="@+id/toggleButton"
+                    android:textColor="#000000"
+                    android:textColorHighlight="#ffffff"
+                    android:textOff="Farmer"
+                    android:textOn="Farmer"
+                    android:background="@drawable/round_button"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="5dp" />
+
+                <ToggleButton
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:id="@+id/toggleButton3"
+                    android:textColor="#000000"
+                    android:textColorHighlight="#ffffff"
+                    android:textOff="Handyman"
+                    android:textOn="Handyman"
+                    android:background="@drawable/round_button"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/toggleButton4"
+                    android:layout_toEndOf="@+id/toggleButton4"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="5dp" />
+
+                <ToggleButton
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:id="@+id/toggleButton4"
+                    android:textColor="#000000"
+                    android:textColorHighlight="#ffffff"
+                    android:textOff="Carpenter"
+                    android:textOn="Carpenter"
+                    android:background="@drawable/round_button"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/toggleButton"
+                    android:layout_toEndOf="@+id/toggleButton"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="5dp" />
+
+                <ToggleButton
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:id="@+id/toggleButton5"
+                    android:textColor="#000000"
+                    android:textColorHighlight="#ffffff"
+                    android:textOff="Electrician"
+                    android:textOn="Electrician"
+                    android:background="@drawable/round_button"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/toggleButton3"
+                    android:layout_toEndOf="@+id/toggleButton3"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="5dp" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="834dp"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:layout_marginTop="16dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Pragya Lohani"
+                        android:id="@+id/textView7"
+                        android:textIsSelectable="false"
+                        android:textSize="30dp"
+                        android:textColor="#696969"
+                        android:layout_centerVertical="true" />
+
+                    <LinearLayout
+                        android:paddingRight="128dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerInParent="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="75px"
+                            android:layout_height="75px"
+                            android:background="@drawable/ic_lightbulb_fullcolor" />
+
+                        <ImageView
+                            android:layout_width="75px"
+                            android:layout_height="75px"
+                            android:background="@drawable/ic_lightbulb_fullcolor" />
+
+                        <ImageView
+                            android:layout_width="75px"
+                            android:layout_height="75px"
+                            android:background="@drawable/ic_lightbulb_fullcolor" />
+
+                        <ImageView
+                            android:layout_width="75px"
+                            android:layout_height="75px"
+                            android:background="@drawable/ic_lightbulb_fullcolor" />
+
+                        <ImageView
+                            android:layout_width="75px"
+                            android:layout_height="75px"
+                            android:background="@drawable/ic_lightbulb_fullcolor" />
+
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_marginTop="16dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tanu Bhusal"
+                        android:id="@+id/textView8"
+                        android:textIsSelectable="false"
+                        android:textSize="30dp"
+                        android:textColor="#696969"
+                        android:layout_centerVertical="true" />
+
+                    <LinearLayout
+                        android:paddingRight="128dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerInParent="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="75px"
+                            android:layout_height="75px"
+                            android:background="@drawable/ic_lightbulb_fullcolor" />
+
+                        <ImageView
+                            android:layout_width="75px"
+                            android:layout_height="75px"
+                            android:background="@drawable/ic_lightbulb_fullcolor" />
+
+                        <ImageView
+                            android:layout_width="75px"
+                            android:layout_height="75px"
+                            android:background="@drawable/ic_lightbulb_fullcolor" />
+
+                        <ImageView
+                            android:layout_width="75px"
+                            android:layout_height="75px"
+                            android:background="@drawable/ic_lightbulb_fullcolor" />
+
+                        <ImageView
+                            android:layout_width="75px"
+                            android:layout_height="75px"
+                            android:background="@drawable/ic_lightbulb_halfcolor" />
+
+                    </LinearLayout>
+                </RelativeLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

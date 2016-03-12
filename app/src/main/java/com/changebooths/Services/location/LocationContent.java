@@ -59,6 +59,7 @@ public class LocationContent {
         public final String id;
         public final LatLng latLng;
         public final String name;
+        //public final String
 
         public LocationItem(String id, LatLng latLng, String name) {
             this.id = id;
