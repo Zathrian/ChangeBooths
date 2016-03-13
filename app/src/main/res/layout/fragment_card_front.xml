@@ -92,28 +92,28 @@
                     android:orientation="horizontal">
 
                     <ImageView
-                        android:layout_width="75px"
-                        android:layout_height="75px"
+                        android:layout_width="37dp"
+                        android:layout_height="37dp"
                         android:background="@drawable/ic_lightbulb_fullcolor" />
 
                     <ImageView
-                        android:layout_width="75px"
-                        android:layout_height="75px"
+                        android:layout_width="37dp"
+                        android:layout_height="37dp"
                         android:background="@drawable/ic_lightbulb_fullcolor" />
 
                     <ImageView
-                        android:layout_width="75px"
-                        android:layout_height="75px"
+                        android:layout_width="37dp"
+                        android:layout_height="37dp"
                         android:background="@drawable/ic_lightbulb_fullcolor" />
 
                     <ImageView
-                        android:layout_width="75px"
-                        android:layout_height="75px"
+                        android:layout_width="37dp"
+                        android:layout_height="37dp"
                         android:background="@drawable/ic_lightbulb_fullcolor" />
 
                     <ImageView
-                        android:layout_width="75px"
-                        android:layout_height="75px"
+                        android:layout_width="37dp"
+                        android:layout_height="37dp"
                         android:background="@drawable/ic_lightbulb_halfcolor" />
 
                 </LinearLayout>

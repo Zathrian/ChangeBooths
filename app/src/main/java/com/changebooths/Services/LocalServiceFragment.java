@@ -68,7 +68,7 @@ public class LocalServiceFragment extends Fragment {
             } else {
                 recyclerView.setLayoutManager(new GridLayoutManager(context, mColumnCount));
             }
-            recyclerView.setAdapter(new MyLocalServiceRecyclerViewAdapter(LocationContent.ITEMS, mListener));
+            recyclerView.setAdapter(new MyLocalServiceRecyclerViewAdapter(LocationContent.ITEMS, mListener, getActivity()));
         }
         return view;
     }

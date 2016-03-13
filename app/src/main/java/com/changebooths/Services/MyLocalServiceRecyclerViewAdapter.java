@@ -1,9 +1,12 @@
 package com.changebooths.Services;
 
+import android.content.Context;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.changebooths.Services.location.LocationContent.LocationItem;
@@ -20,10 +23,12 @@ public class MyLocalServiceRecyclerViewAdapter extends RecyclerView.Adapter<MyLo
 
     private final List<LocationItem> mValues;
     private final LocalServiceFragment.OnListFragmentInteractionListener mListener;
+    private final Context ctx;
 
-    public MyLocalServiceRecyclerViewAdapter(List<LocationItem> items, LocalServiceFragment.OnListFragmentInteractionListener listener) {
+    public MyLocalServiceRecyclerViewAdapter(List<LocationItem> items, LocalServiceFragment.OnListFragmentInteractionListener listener, Context ctx) {
         mValues = items;
         mListener = listener;
+        this.ctx = ctx;
     }
 
     @Override
@@ -36,7 +41,8 @@ public class MyLocalServiceRecyclerViewAdapter extends RecyclerView.Adapter<MyLo
     @Override
     public void onBindViewHolder(final ViewHolder holder, int position) {
         holder.mItem = mValues.get(position);
-        holder.mIdView.setText(mValues.get(position).id);
+        //holder.mIdView.setText(mValues.get(position).id);
+        holder.serviceIcon.setImageDrawable(ContextCompat.getDrawable(this.ctx, mValues.get(position).serviceDrawable));
         holder.mContentView.setText(mValues.get(position).name);
 
         holder.mView.setOnClickListener(new View.OnClickListener() {
@@ -58,14 +64,15 @@ public class MyLocalServiceRecyclerViewAdapter extends RecyclerView.Adapter<MyLo
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         public final View mView;
-        public final TextView mIdView;
+        public final ImageView serviceIcon;
         public final TextView mContentView;
         public LocationItem mItem;
 
         public ViewHolder(View view) {
             super(view);
             mView = view;
-            mIdView = (TextView) view.findViewById(R.id.id);
+            serviceIcon = (ImageView) view.findViewById(R.id.serviceIcon);
+            //mIdView = (TextView) view.findViewById(R.id.id);
             mContentView = (TextView) view.findViewById(R.id.content);
         }
 

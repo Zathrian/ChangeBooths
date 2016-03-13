@@ -25,8 +25,8 @@
             android:layout_alignParentRight="true"
             android:layout_marginTop="12dp"
             android:layout_marginRight="16dp"
-            android:layout_width="325px"
-            android:layout_height="150px"
+            android:layout_width="162.5dp"
+            android:layout_height="75dp"
             android:background="@drawable/profile_profiletext" />
 
     </RelativeLayout>
@@ -168,57 +168,41 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/skillsLayout" >
 
-                <ToggleButton
+                <ImageView
                     android:layout_width="120dp"
                     android:layout_height="120dp"
                     android:id="@+id/toggleButton"
-                    android:textColor="#000000"
-                    android:textColorHighlight="#ffffff"
-                    android:textOff="Farmer"
-                    android:textOn="Farmer"
-                    android:background="@drawable/round_button"
+                    android:background="@drawable/profile_farmer"
                     android:layout_marginRight="20dp"
                     android:layout_marginBottom="5dp" />
 
-                <ToggleButton
+                <ImageView
                     android:layout_width="120dp"
                     android:layout_height="120dp"
                     android:id="@+id/toggleButton3"
-                    android:textColor="#000000"
-                    android:textColorHighlight="#ffffff"
-                    android:textOff="Handyman"
-                    android:textOn="Handyman"
-                    android:background="@drawable/round_button"
+                    android:background="@drawable/profile_carpenter"
                     android:layout_alignParentTop="true"
                     android:layout_toRightOf="@+id/toggleButton4"
                     android:layout_toEndOf="@+id/toggleButton4"
                     android:layout_marginRight="20dp"
                     android:layout_marginBottom="5dp" />
 
-                <ToggleButton
+                <ImageView
                     android:layout_width="120dp"
                     android:layout_height="120dp"
                     android:id="@+id/toggleButton4"
-                    android:textColor="#000000"
-                    android:textColorHighlight="#ffffff"
-                    android:textOff="Carpenter"
-                    android:textOn="Carpenter"
-                    android:background="@drawable/round_button"
+                    android:background="@drawable/profile_handyman"
                     android:layout_alignParentTop="true"
                     android:layout_toRightOf="@+id/toggleButton"
                     android:layout_toEndOf="@+id/toggleButton"
                     android:layout_marginRight="20dp"
                     android:layout_marginBottom="5dp" />
 
-                <ToggleButton
+                <ImageView
                     android:layout_width="120dp"
                     android:layout_height="120dp"
                     android:id="@+id/toggleButton5"
-                    android:textColor="#000000"
-                    android:textColorHighlight="#ffffff"
-                    android:textOff="Electrician"
-                    android:textOn="Electrician"
-                    android:background="@drawable/round_button"
+                    android:background="@drawable/profile_electrician"
                     android:layout_alignParentTop="true"
                     android:layout_toRightOf="@+id/toggleButton3"
                     android:layout_toEndOf="@+id/toggleButton3"

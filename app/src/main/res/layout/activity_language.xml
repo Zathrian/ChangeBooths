@@ -15,8 +15,8 @@
         android:gravity="center">
 
         <ImageView
-            android:layout_height="575dp"
-            android:layout_width="575dp"
+            android:layout_height="287.5dp"
+            android:layout_width="287.5dp"
             android:layout_margin="24dp"
             android:background="@drawable/language_englishbutton"
             android:gravity="center"
@@ -24,8 +24,8 @@
             android:onClick="onLocalServicesClick" />
 
         <ImageView
-            android:layout_height="575dp"
-            android:layout_width="575dp"
+            android:layout_height="287.5dp"
+            android:layout_width="287.5dp"
             android:layout_margin="24dp"
             android:background="@drawable/language_nepalibutton"
             android:gravity="center"

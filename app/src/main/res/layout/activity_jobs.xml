@@ -24,10 +24,10 @@
 
         <ImageView
             android:layout_alignParentRight="true"
-            android:layout_marginRight="16dp"
             android:layout_marginTop="12dp"
-            android:layout_width="300px"
-            android:layout_height="150px"
+            android:layout_marginRight="16dp"
+            android:layout_width="150dp"
+            android:layout_height="75dp"
             android:background="@drawable/job_jobtext" />
 
     </RelativeLayout>
